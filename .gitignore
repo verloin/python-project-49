@@ -1,0 +1,86 @@
+# --- OS / Editor junk ---
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.tmp
+*.bak
+
+# --- IDE ---
+.vscode/
+.idea/
+*.iml
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.py,cover
+.python-version
+
+# virtualenv
+.venv/
+venv/
+env/
+ENV/
+
+# packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# testing
+.coverage
+coverage.xml
+htmlcov/
+.pytest_cache/
+
+# type checkers
+.mypy_cache/
+.pyre/
+.pytype/
+
+# uv / pip / poetry
+uv.lock
+poetry.lock
+pip-wheel-metadata/
+
+# --- Logs ---
+*.log
+
+# --- Env files ---
+.env
+.env.*
+*.env
+
+# --- Docker ---
+*.tar
+docker-compose.override.yml
+
+# --- Kubernetes ---
+*.kubeconfig
+kubeconfig*
+
+# --- Terraform ---
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+
+# --- Ansible ---
+*.retry
+
+# --- Go ---
+bin/
+pkg/
+*.test
+
+# --- Build artifacts ---
+out/
+target/
+
+# --- Misc ---
+*.pid
+*.seed
