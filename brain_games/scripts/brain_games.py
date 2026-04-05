@@ -7,7 +7,6 @@ def func():
 
 def main():
     func()
-    welcome_user()
 
 
 main()
