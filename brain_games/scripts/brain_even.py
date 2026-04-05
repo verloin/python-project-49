@@ -13,18 +13,16 @@ def main():
         n = random.randint(1, 100)
         print(f'Question: {n}')
         answer = input('Your answer: ')
-        result = n % 2 == 0
-
-        if answer == result:
+        
+        is_even = n % 2 == 0
+        correct_answer = 'yes' if is_even else 'no'
+        
+        if answer == correct_answer:
             count += 1
             print('Correct!')
         else:
-            if answer == 'yes':
-                print("'yes' is wrong answer ;(. Correct answer was 'no'.")
-                print(f"Let's try again, {name}!")
-            else:
-                print("'no' is wrong answer ;(. Correct answer was 'yes'.")
-                print(f"Let's try again, {name}!")
+            print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
+            print(f"Let's try again, {name}!")
             return
         
         if count == 3:
