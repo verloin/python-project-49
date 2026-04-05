@@ -6,13 +6,19 @@ import prompt
 def arifmetic():
     start = random.randint(1, 20)
     step = random.randint(2, 9)
-    rand = random.randint(1, 10)
+    hidden_index = random.randint(0, 9)  # индекс скрытого элемента
     nums = [start + i * step for i in range(10)]
-
-    result_lst = ' '.join([str(i) for i in nums[:rand - 1]]) 
-    + ' .. ' + ' '.join([str(i) for i in nums[rand:]])
     
-    return result_lst, int(nums[rand - 1])
+    # Формируем строку с вопросом
+    parts = []
+    for i, num in enumerate(nums):
+        if i == hidden_index:
+            parts.append('..')
+        else:
+            parts.append(str(num))
+    
+    result_lst = ' '.join(parts)
+    return result_lst, nums[hidden_index]
 
 
 def main():
