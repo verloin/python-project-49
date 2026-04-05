@@ -22,7 +22,7 @@ def main():
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
-    print('Answer "yes" if given number is prime.')
+    print('Answer "yes" if given number is prime. Otherwise answer "no".')
     
     count = 0
     while count < 3:
@@ -30,13 +30,15 @@ def main():
         
         print(f'Question: {n}')
         answer = input('Your answer: ')
-        result = True if answer == 'yes' else False
         
-        if result == is_prime(n):
+        is_prime_number = is_prime(n)
+        correct_answer = 'yes' if is_prime_number else 'no'
+        
+        if answer == correct_answer:
             count += 1
             print('Correct!')
         else:
-            print(f"'{result}' is wrong answer ;(. Correct answer was '{is_prime(n)}'.")
+            print(f"'{answer}' is wrong answer ;(. Correct answer was '{correct_answer}'.")
             print(f"Let's try again, {name}!")
             return
         
