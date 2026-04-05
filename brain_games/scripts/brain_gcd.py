@@ -1,4 +1,5 @@
 import random
+
 import prompt
 
 
@@ -7,9 +8,10 @@ def gcd(a, b):
         a, b = b, a % b
     return abs(a)
 
+
 def main():
     print('Welcome to the Brain Games!')
-    name = prompt.string('May I have your name? ')
+    name = prompt.string('May I have your name?')
     print(f'Hello, {name}!')
     print('Find the greatest common divisor of given numbers.')
     
@@ -26,7 +28,10 @@ def main():
             count += 1
             print('Correct!')
         else:
-            print(f"'{answer}' is wrong answer ;(. Correct answer was '{result}'.")
+            print(
+                f"'{answer}' is wrong answer ;(."
+                f"Correct answer was '{result}'."
+            )
             print(f"Let's try again, {name}!")
             return
         
