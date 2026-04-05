@@ -6,8 +6,8 @@ def main():
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
-    print('Answer "yes" if the number is even, otherwise answer "no".')
     
+    print('Answer "yes" if the number is even, otherwise answer "no".')
     count = 0
     while count < 3:
         n = random.randint(1, 100)
@@ -19,8 +19,12 @@ def main():
             count += 1
             print('Correct!')
         else:
-            print(f"'{answer}' is wrong answer ;(. Correct answer was '{result}'.")
-            print(f"Let's try again, {name}!")
+            if answer == 'yes':
+                print("'yes' is wrong answer ;(. Correct answer was 'no'.")
+                print(f"Let's try again, {name}!")
+            else:
+                print("'no' is wrong answer ;(. Correct answer was 'yes'.")
+                print(f"Let's try again, {name}!")
             return
         
         if count == 3:
