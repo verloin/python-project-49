@@ -2,20 +2,27 @@ import random
 import prompt
 
 
+def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return abs(a)
+
 def main():
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
-    print('Answer "yes" if the number is even, otherwise answer "no".')
+    print('Find the greatest common divisor of given numbers.')
     
     count = 0
     while count < 3:
-        n = random.randint(1, 100)
-        print(f'Question: {n}')
+        a = random.randint(1, 100)
+        b = random.randint(1, 100)
+        
+        print(f'Question: {a} {b}')
         answer = input('Your answer: ')
-        result = n % 2 == 0
-
-        if answer == result:
+        result = gcd(a, b)
+        
+        if int(answer) == result:
             count += 1
             print('Correct!')
         else:
